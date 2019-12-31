@@ -1,2 +1,3 @@
-# Chef
-Final task for training(November 2019)
+# Chef (Final task for training(November 2019))
+
+- директория "recipe" содержит текстовые файлы для чтения данных из программы. (Файл дает понятие о информации хранимой в файлах)
