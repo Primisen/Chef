@@ -2,13 +2,11 @@ package com.primisen.java_november.part4;
 
 import com.primisen.java_november.part4.chef.Chef;
 import com.primisen.java_november.part4.chef.ChefLogic;
-import com.primisen.java_november.part4.dish.salad.Salad;
-import com.primisen.java_november.part4.dish.salad.SaladLogic;
-import com.primisen.java_november.part4.ingredient.Ingredient;
-import com.primisen.java_november.part4.util.FileReader;
-import com.primisen.java_november.part4.util.RecipeFileReader;
+import com.primisen.java_november.part4.chef.exception.ChefLogicException;
+import com.primisen.java_november.part4.salad.Salad;
+import com.primisen.java_november.part4.salad.SaladLogic;
 
-import java.util.ArrayList;
+import java.io.IOException;
 
 /*
 Шеф-повар.
@@ -21,22 +19,20 @@ import java.util.ArrayList;
  */
 public class Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ChefLogicException, IOException {
 
         //проверять правильность пути к файлу
-        FileReader fileReader = new FileReader("monomah.txt", "D:\\Java\\training november\\");
-        RecipeFileReader recipeFileReader = new RecipeFileReader(fileReader.read());
 
-        ArrayList<Ingredient> ingredients = recipeFileReader.findIngredient();
-
-        Chef chef = new Chef(ingredients);
+        Chef chef = new Chef("D:\\Java\\training november\\monomah.txt");
 
         ChefLogic chefLogic = new ChefLogic(chef);
 
         Salad salad = chefLogic.cook();
+
         SaladLogic saladLogic = new SaladLogic();
         System.out.println("Каллорийность салата = " + saladLogic.countCalories(salad)); //отдельный метод
         saladLogic.sort(salad);
         System.out.println("Сортировка по каллорийности = " + salad.getIngredients());
+
     }
 }
