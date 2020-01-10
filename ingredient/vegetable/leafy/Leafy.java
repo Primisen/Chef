@@ -4,7 +4,7 @@ import com.primisen.java_november.part4.ingredient.Ingredient;
 
 public class Leafy extends Ingredient { //листовые
 
-    private LeafyType type;
+    private boolean dried; //сушенный
 
     public Leafy(){}
 //
@@ -17,7 +17,12 @@ public class Leafy extends Ingredient { //листовые
 //        return type;
 //    }
 
-    public void setType(LeafyType type) {
-        this.type = type;
+
+    public boolean isDried() {
+        return dried;
+    }
+
+    public void setDried(boolean dried) {
+        this.dried = dried;
     }
 }

@@ -1,23 +1,20 @@
 package com.primisen.java_november.part4.ingredient.vegetable.root_crop;
 
 import com.primisen.java_november.part4.ingredient.Ingredient;
+import com.primisen.java_november.part4.ingredient.IngredientType;
 
+//ex: кожура должна быть очищена!
 public class RootCrop extends Ingredient {
 
-    private RootCropType type;
+    private boolean peel; //наличие кожуры, шелухи
 
     public RootCrop(){}
 
-//    public RootCrop(int calorie, double carbohydrates, double fits, double proteins, double weight, RootCropType type) {
-//        super(calorie, carbohydrates, fits, proteins, weight);
-//        this.type = type;
-//    }
-//
-//    public RootCropType getType() {
-//        return type;
-//    }
+    public boolean isPeel() {
+        return peel;
+    }
 
-    public void setType(RootCropType type) {
-        this.type = type;
+    public void setPeel(boolean peel) {
+        this.peel = peel;
     }
 }

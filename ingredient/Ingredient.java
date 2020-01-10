@@ -1,8 +1,9 @@
 package com.primisen.java_november.part4.ingredient;
 
+//провести честку закомментированных полей
 public class Ingredient implements Comparable<Ingredient> {
 
-    private IngredientType type;
+//    private IngredientType type; //удален из конструктора
     private String name;
     private double weight;
     private int calorie;
@@ -12,13 +13,22 @@ public class Ingredient implements Comparable<Ingredient> {
 
     public Ingredient(){}
 
-    public IngredientType getType() {
-        return type;
+    public Ingredient(String name, double weight, int calorie, double carbohydrates, double fits, double proteins) {
+        this.name = name;
+        this.weight = weight;
+        this.calorie = calorie;
+        this.carbohydrates = carbohydrates;
+        this.fits = fits;
+        this.proteins = proteins;
     }
 
-    public void setType(IngredientType type) {
-        this.type = type;
-    }
+//    public IngredientType getType() {
+//        return type;
+//    }
+//
+//    public void setType(IngredientType type) {
+//        this.type = type;
+//    }
 
     public String getName() {
         return name;
@@ -77,8 +87,8 @@ public class Ingredient implements Comparable<Ingredient> {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Ingredient{");
-        sb.append("type=").append(type);
-        sb.append(", name='").append(name).append('\'');
+//        sb.append("type=").append(type);
+        sb.append("name='").append(name).append('\'');
         sb.append(", weight=").append(weight);
         sb.append(", calorie=").append(calorie);
         sb.append(", carbohydrates=").append(carbohydrates);

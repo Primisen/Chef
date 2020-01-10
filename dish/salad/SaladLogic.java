@@ -18,8 +18,6 @@ public class SaladLogic{ //переделать
             calories += salad.getIngredients().get(i).getCalorie();
         }
 
-        calories += salad.getSauce().getCalorie();
-
         return calories;
     }
 
