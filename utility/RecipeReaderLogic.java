@@ -50,15 +50,15 @@ public class RecipeReaderLogic {
         int i = 0;
         while (matcher.find()) {
 
-            ingredients.add(determineType(matcher.group(1)));
-            ingredients.get(i).setName(matcher.group(2));
-            ingredients.get(i).setWeight(Double.parseDouble(matcher.group(3)));
-            ingredients.get(i).setCalorie(Integer.parseInt(matcher.group(4)));
-            ingredients.get(i).setCarbohydrates(Double.parseDouble(matcher.group(5)));
-            ingredients.get(i).setFits(Double.parseDouble(matcher.group(6)));
-            ingredients.get(i).setProteins(Double.parseDouble(matcher.group(7)));
+                ingredients.add(determineType(matcher.group(1)));
+                ingredients.get(i).setName(matcher.group(2));
+                ingredients.get(i).setWeight(Double.parseDouble(matcher.group(3)));
+                ingredients.get(i).setCalorie(Integer.parseInt(matcher.group(4)));
+                ingredients.get(i).setCarbohydrates(Double.parseDouble(matcher.group(5)));
+                ingredients.get(i).setFits(Double.parseDouble(matcher.group(6)));
+                ingredients.get(i).setProteins(Double.parseDouble(matcher.group(7)));
 
-            i++;
+                i++;
         }
         return ingredients;
     }

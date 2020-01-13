@@ -1,28 +1,24 @@
 package com.primisen.java_november.part4.ingredient.vegetable.leafy;
 
 import com.primisen.java_november.part4.ingredient.Ingredient;
+import com.primisen.java_november.part4.ingredient.IngredientCook;
 
-public class Leafy extends Ingredient { //листовые
+public class Leafy extends Ingredient implements IngredientCook { //листовые
 
-    private boolean dried; //сушенный
+    private boolean crushed; //измельченный
 
     public Leafy(){}
-//
-//    public Leafy(int calorie, double carbohydrates, double fits, double proteins, double weight, LeafyType type) {
-//        super(calorie, carbohydrates, fits, proteins, weight);
-//        this.type = type;
-//    }
-//
-//    public LeafyType getType() {
-//        return type;
-//    }
 
-
-    public boolean isDried() {
-        return dried;
+    public boolean isCrushed() {
+        return crushed;
     }
 
-    public void setDried(boolean dried) {
-        this.dried = dried;
+    public void setCrushed(boolean crushed) {
+        this.crushed = crushed;
+    }
+
+    @Override
+    public void cook(){
+        setCrushed(true);
     }
 }

@@ -33,6 +33,5 @@ public class Application {
         System.out.println("Каллорийность салата = " + saladLogic.countCalories(salad)); //отдельный метод
         saladLogic.sort(salad);
         System.out.println("Сортировка по каллорийности = " + salad.getIngredients());
-
     }
 }
