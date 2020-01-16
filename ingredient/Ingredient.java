@@ -1,6 +1,6 @@
 package com.primisen.java_november.part4.ingredient;
 
-//провести честку закомментированных полей
+//equals, hashCode, toString
 public abstract class Ingredient implements Comparable<Ingredient> {
 
 //    private IngredientType type; //удален из конструктора
